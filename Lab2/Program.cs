@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Text;
 
 
 namespace ConsoleApp1
@@ -120,6 +120,106 @@ namespace ConsoleApp1
 
 
             string NullSt = "";
+
+            if (String.Compare(NullSt, Str1) != 0)
+            {
+                Console.WriteLine("String is not empty");
+            }
+            else
+            {
+                Console.WriteLine("String is empty");
+            }
+
+
+
+            StringBuilder StrB = new StringBuilder("world");
+            StrB.Append("!!!!!");
+
+            StrB.Insert(0, "Beautiful ");
+            Console.WriteLine(StrB);
+
+
+
+
+            int[][] Mas = new int[3][];
+
+            Mas[0] = new int[5] { 1, 2, 3, 4, 5 };
+            Mas[1] = new int[4] { 1, 2, 3, 4 };
+            Mas[2] = new int[4] { 1, 2, 3 ,4};
+
+            for (int i = 0; i < Mas.Length; i++)
+            {
+                for (int j = 0; j < Mas[i].Length; j++)
+                {
+                    Console.Write($"  { Mas[i][j]}   ");
+                }
+                Console.WriteLine();
+            }
+
+            Console.WriteLine();
+
+
+
+
+            string[] MasStr = { "aaaaaaaaa", "11111111", "44444444444" };
+           
+
+            Console.WriteLine($"Size MasStr={MasStr.Length}");
+           /* Console.WriteLine("Enter number and value\n");
+            int num=Int32.Parse(Console.ReadLine());
+
+
+            MasStr[num] = Console.ReadLine();
+
+
+
+
+
+            Console.WriteLine();
+
+
+            for (int i=0;i< MasStr.Length;i++ )
+            {
+                Console.WriteLine(MasStr[i]);
+
+            }
+            Console.WriteLine();
+            */
+
+
+
+
+
+
+            double[][] MasD = new double[3][];
+
+            for(int i=0;i< MasD.Length;i++)
+            {
+                MasD[i] = new double[i + 1];
+                for (int j=0;j<i+1;j++)
+                {
+                    MasD[i][j] = Double.Parse(Console.ReadLine());
+                }
+            }
+
+
+            
+            for (int i = 0; i < MasD.Length; i++)
+            {
+                for (int j = 0; j < MasD[i].Length; j++)
+                {
+                    Console.Write($"  { MasD[i][j]}   ");
+                }
+                Console.WriteLine();
+            }
+
+            Console.WriteLine();
+
+    
+
+
+
+
 
 
 
