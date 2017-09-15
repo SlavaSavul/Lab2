@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Text;
 
-
 namespace ConsoleApp1
 {
     class Program
@@ -212,15 +211,16 @@ namespace ConsoleApp1
                 }
                 Console.WriteLine();
             }
-
             Console.WriteLine();
 
-    
 
 
 
+            var MasInt = new[] { 12.23, 323.2 , 322 }; 
+            var MasString = new[] { "ABC", null };
 
 
+            var Cortage = (first: 5, second: "444",);
 
 
 
