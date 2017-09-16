@@ -80,8 +80,7 @@ namespace ConsoleApp1
             Console.WriteLine(Str.GetType());
 
 
-
-            int? null1 = null;
+            int ? null1 = null;
             int null2 = null1 ?? 5;
             Console.WriteLine("null2={0}", null2);
 
@@ -101,6 +100,7 @@ namespace ConsoleApp1
 
             Console.WriteLine();
 
+            Console.WriteLine("--------------------------------------------");
 
             string text = "Thisstring";
 
@@ -117,6 +117,7 @@ namespace ConsoleApp1
             }
 
 
+            Console.WriteLine("--------------------------------------------");
 
             string NullSt = "";
 
@@ -129,6 +130,7 @@ namespace ConsoleApp1
                 Console.WriteLine("String is empty");
             }
 
+            Console.WriteLine("--------------------------------------------");
 
 
             StringBuilder StrB = new StringBuilder("world");
@@ -138,13 +140,15 @@ namespace ConsoleApp1
             Console.WriteLine(StrB);
 
 
+            Console.WriteLine("--------------------------------------------");
+
 
 
             int[][] Mas = new int[3][];
 
             Mas[0] = new int[5] { 1, 2, 3, 4, 5 };
             Mas[1] = new int[4] { 1, 2, 3, 4 };
-            Mas[2] = new int[4] { 1, 2, 3 ,4};
+            Mas[2] = new int[4] { 1, 2, 3, 4 };
 
             for (int i = 0; i < Mas.Length; i++)
             {
@@ -158,34 +162,37 @@ namespace ConsoleApp1
             Console.WriteLine();
 
 
+            Console.WriteLine("--------------------------------------------");
 
 
             string[] MasStr = { "aaaaaaaaa", "11111111", "44444444444" };
-           
+
 
             Console.WriteLine($"Size MasStr={MasStr.Length}");
-           /* Console.WriteLine("Enter number and value\n");
-            int num=Int32.Parse(Console.ReadLine());
+             Console.WriteLine("Enter number and value\n");
+             int num=Int32.Parse(Console.ReadLine());
 
 
-            MasStr[num] = Console.ReadLine();
+             MasStr[num] = Console.ReadLine();
 
 
 
 
+            Console.WriteLine("--------------------------------------------");
 
             Console.WriteLine();
 
 
-            for (int i=0;i< MasStr.Length;i++ )
-            {
-                Console.WriteLine(MasStr[i]);
+             for (int i=0;i< MasStr.Length;i++ )
+             {
+                 Console.WriteLine(MasStr[i]);
 
-            }
-            Console.WriteLine();
-            */
+             }
+             Console.WriteLine();
 
 
+
+            Console.WriteLine("--------------------------------------------");
 
 
 
@@ -200,7 +207,7 @@ namespace ConsoleApp1
                     MasD[i][j] = Double.Parse(Console.ReadLine());
                 }
             }
-
+            
 
             
             for (int i = 0; i < MasD.Length; i++)
@@ -214,15 +221,34 @@ namespace ConsoleApp1
             Console.WriteLine();
 
 
+            Console.WriteLine("--------------------------------------------");
 
 
-            var MasInt = new[] { 12.23, 323.2 , 322 }; 
+            var MasInt = new[] { 12.23, 323.2, 322 };
             var MasString = new[] { "ABC", null };
 
 
-            var Cortage = (first: 5, second: "444",);
+
+            ValueTuple<int, string, char, string, ulong> cortage = (num1: 1, num2: "22", num3: 'f', num4: "rrr", num5: UInt64.MaxValue);
 
 
+            Console.WriteLine($"{cortage.Item1} {cortage.Item3} { cortage.Item4}");
+
+                int CorInt = cortage.Item1;
+            string CorStr1 = cortage.Item2;
+            string CorStr2 = cortage.Item4;
+            char CorCh = cortage.Item3;
+            ulong CorUl = cortage.Item5;
+
+
+
+
+            int[] arr = new int[4] {1,2,3,4 };
+
+            var Typle=MyFunction(arr,text);
+
+            Console.WriteLine(Typle);
+            Console.WriteLine("--------------------------------------------");
 
 
 
@@ -231,5 +257,22 @@ namespace ConsoleApp1
 
             Console.ReadKey();
         }
+        static ValueTuple<int, int, int, char> MyFunction(int[] arr,string str)
+        {
+            int Max = arr[0];
+            int Min = arr[0];
+            int Sum = 0;
+            for (int i=0;i<arr.Length;i++)
+            {
+                if (Max < arr[i]) Max = arr[i];
+                if (Min > arr[i]) Max = arr[i];
+                Sum += arr[i];
+            }
+            ValueTuple<int, int,int, char> cortage = (Max,Min,Sum,str[0]);
+            return cortage;
+        }
+
+
     }
+
 }
