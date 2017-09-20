@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Text;
 
+
+
 namespace ConsoleApp1
 {
     class Program
@@ -66,9 +68,9 @@ namespace ConsoleApp1
             Console.WriteLine("D2={0}", D2);
 
 
-            int X;
+            int X=10;
             object Obj;
-            X = 10;
+           
             Obj = X;
             int Y = (int)Obj;
             Console.WriteLine("Y={0}", Y);
@@ -89,9 +91,7 @@ namespace ConsoleApp1
             string a2 = new string('f', 4);
             Console.WriteLine(a1 == a2);
 
-            /*Console.WriteLine(String.Compare("a","a"));
-            Console.WriteLine(String.Compare("a", "b"));
-            Console.WriteLine(String.Compare("b", "a"));*/
+           
 
             string Str1 = "Hello";
             string Str2 = ", ";
@@ -120,15 +120,9 @@ namespace ConsoleApp1
             Console.WriteLine("--------------------------------------------");
 
             string NullSt = "";
+            Console.WriteLine($"Length={NullSt.Length}");
 
-            if (String.Compare(NullSt, Str1) != 0)
-            {
-                Console.WriteLine("String is not empty");
-            }
-            else
-            {
-                Console.WriteLine("String is empty");
-            }
+           
 
             Console.WriteLine("--------------------------------------------");
 
@@ -154,7 +148,7 @@ namespace ConsoleApp1
             {
                 for (int j = 0; j < Mas[i].Length; j++)
                 {
-                    Console.Write($"  { Mas[i][j]}   ");
+                    Console.Write($"  {Mas[i][j]}   ");
                 }
                 Console.WriteLine();
             }
@@ -229,12 +223,11 @@ namespace ConsoleApp1
 
 
 
-            ValueTuple<int, string, char, string, ulong> cortage = (num1: 1, num2: "22", num3: 'f', num4: "rrr", num5: UInt64.MaxValue);
+            ValueTuple<int, string, char, string, ulong> cortage = (1, "22", 'f',  "rrr", UInt64.MaxValue);
 
 
             Console.WriteLine($"{cortage.Item1} {cortage.Item3} { cortage.Item4}");
-
-                int CorInt = cortage.Item1;
+            int CorInt = cortage.Item1;
             string CorStr1 = cortage.Item2;
             string CorStr2 = cortage.Item4;
             char CorCh = cortage.Item3;
@@ -245,19 +238,20 @@ namespace ConsoleApp1
 
             int[] arr = new int[4] {1,2,3,4 };
 
-            var Typle=MyFunction(arr,text);
+            var Typle= CreateCortage(arr,text);
 
             Console.WriteLine(Typle);
             Console.WriteLine("--------------------------------------------");
 
 
+            
 
 
 
 
             Console.ReadKey();
         }
-        static ValueTuple<int, int, int, char> MyFunction(int[] arr,string str)
+        static (int, int, int, char) CreateCortage(int[] arr,string str)
         {
             int Max = arr[0];
             int Min = arr[0];
@@ -268,8 +262,8 @@ namespace ConsoleApp1
                 if (Min > arr[i]) Max = arr[i];
                 Sum += arr[i];
             }
-            ValueTuple<int, int,int, char> cortage = (Max,Min,Sum,str[0]);
-            return cortage;
+            
+            return (one:Max,Min,Sum,str[0]);;
         }
 
 
