@@ -7101,11 +7101,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Desktop\\Lab2\\Lab2\\Lab2.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\Lab OOP\\Lab2\\Lab2\\Lab2.csproj",
       "projectName": "Lab2",
-      "projectPath": "C:\\Users\\User\\Desktop\\Lab2\\Lab2\\Lab2.csproj",
+      "projectPath": "C:\\Users\\User\\Desktop\\Lab OOP\\Lab2\\Lab2\\Lab2.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Desktop\\Lab2\\Lab2\\obj\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\Lab OOP\\Lab2\\Lab2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
